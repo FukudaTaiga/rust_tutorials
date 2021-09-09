@@ -4,13 +4,13 @@ use rand::Rng;
 //expression: value, function call, macro call, block({}), if - never add ;
 
 //need type annotation for arg (and return value if exists)
-//return last asserted expression like scala
 fn _add(x: i32, y: i32) -> i32 {
-  x + y //if ; added, compile error
+  return x + y;
 }
 
+//return last asserted expression like scala
 fn _five() -> i64 {
-  5
+  5 //if ; added, compile error
 }
 
 fn main() {
@@ -22,7 +22,7 @@ fn main() {
   println!("fibonutti 60 = {}", fib(20));
 }
 
-//void. function can be declared anywhere
+//function can be declared anywhere
 fn after_main(x: i64) {
   //`if` never have other than bool unlike js
   let log = if x < 0 {
@@ -30,13 +30,13 @@ fn after_main(x: i64) {
   } else if x < 100 {
     "x is under 100"
   } else {
-    "x is over 100" //if 6, compile error
+    "x is over 100" //if 6, compile error cuz can't determine log type
   }; //never have multiple type
   println!("{}", log);
 }
 
 fn loops() {
-  //loop mean while (true)
+  //`loop` means while(true)
   loop {
     let r = rand::thread_rng().gen_range(1, 101);
     println!("random value is {}", r);
