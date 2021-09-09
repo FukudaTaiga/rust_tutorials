@@ -1,9 +1,7 @@
-/**
- * Section 2
- * standard library.
- * you can use the types in prelude by default.
- * `use ~` to import required type
-*/
+// Section 2
+// standard library.
+// you can use the types in prelude by default.
+// `use ~` to import required type
 use std::io;
 use std::cmp::Ordering; // enum - Less, Equal, Greater
 use rand::Rng; // import trait !!necessary

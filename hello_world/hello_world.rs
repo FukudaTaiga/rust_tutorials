@@ -1,7 +1,5 @@
-/** 
-* fn - function
-* main - 常に最初に呼ばれる
-*/
+// fn - function
+// main - 常に最初に呼ばれる
 fn main() {
     // always 4 indent
     // 世 界 よ 、 こ ん に ち は

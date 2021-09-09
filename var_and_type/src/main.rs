@@ -28,13 +28,11 @@ fn main() {
     //_spaces = _spaces.len(); //compile error
 
     //types - scalar type (primitive) or multiple type
-    /**
-     * scalar type
-     * signed integer - i8~i64, isize(depending on OS)
-     * unsigned - u8~u64, usize(depending on OS)
-     * separating char - _
-     * default - i32
-     */
+    // scalar type
+    // signed integer - i8~i64, isize(depending on OS)
+    // unsigned - u8~u64, usize(depending on OS)
+    // separating char - _
+    // default - i32
     let _int: i64 = 2222_2222; //i64
     let _int = 57u8; //u8 suffix
     let _int = 0xff; //16
@@ -42,43 +40,33 @@ fn main() {
     let _int = 0b1010; //2
     let _int = b'A'; //byte
 
-    /**
-     * scalar type
-     * float - f32 or f64
-     * default - f64
-     */
+     //scalar type
+     //float - f32 or f64
+     //default - f64
     let _float = 3.1415926535; //f64
     let _float: f32 = 3.1415926535; //f32
 
-    /**
-     * scalar type
-     * bool - true or false
-     */
+    //scalar type
+    //bool - true or false
     let _b = true;
     let _b: bool = false;
 
-    /**
-     * scalar type
-     * char - quated by '' (not "", used by string)
-     * implemented by unicode - many character is valid
-     */
+    // scalar type
+    // char - quated by '' (not "", used by string)
+    // implemented by unicode - many character is valid
     let _c = 'c';
 
-    /**
-     * basic multiple type
-     * tuple
-     */
+    // basic multiple type
+    // tuple
     let tuple = (1, 2, '3');
     println!("tuple's second value: {}", tuple.1);
     let tuple: (f32, f64, char) = (4.0, 2.0, '6');
     let (_x, y, _z) = tuple; //decomposed with pattern matching
     println!("tuple's second value: {}", y);
 
-    /**
-     * basic multiple type
-     * array - fixed length
-     * in contrast, vector has non-fixed length
-     */
+    // basic multiple type
+    // array - fixed length
+    // in contrast, vector has non-fixed length
     let _array = [0, 1, 2, 3];
     let array:[i32; 4] = [1; 4]; //[1, 1, 1, 1] 
     println!("array's second value: {}", array[1]);
