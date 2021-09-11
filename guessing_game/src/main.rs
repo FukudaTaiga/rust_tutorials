@@ -6,14 +6,47 @@ use rand::Rng;
 use std::cmp::Ordering; // enum - Less, Equal, Greater
 use std::io; // import trait !!necessary
 
-fn main() {
-  println!("Guess the number");
+mod guess {
+  pub struct Guess {
+    value: i32,
+  }
 
-  let secret = rand::thread_rng().gen_range(1, 101); //generate 1 ~ 100
-                                                     //println!("Secret is {}", secret);
+  impl Guess {
+    pub const MIN: i32 = 1;
+    pub const MAX: i32 = 10000;
+  }
+
+  impl Guess {
+    pub fn new(value: i32) -> Result<Guess, String> {
+      if value < Guess::MIN || Guess::MAX < value {
+        Err(format!(
+          "secret value is between {} and {}",
+          Guess::MIN,
+          Guess::MAX
+        ))
+      } else {
+        Ok(Guess { value })
+      }
+    }
+
+    pub fn get(&self) -> i32 {
+      self.value
+    }
+  }
+}
+
+fn main() {
+  use guess::Guess;
+
+  println!("Guessing game!");
+
+  let secret = rand::thread_rng().gen_range(Guess::MIN, Guess::MAX); //generate 1 ~ 100
+                                                                     //println!("Secret is {}", secret);
+  let mut challenge = 0;
 
   loop {
     println!("Please input your guess");
+    challenge += 1;
 
     //let guess_imut = String::new(); <- immutable var
     // mutable var
@@ -25,20 +58,34 @@ fn main() {
       .expect("Failed to read"); // expect return if Ok - value, Err - crash and log an argument
 
     //shadow variable. :u32, type annotation. expect() -> match ... {} is general strategy to handle error.
-    let guess: u32 = match guess.trim().parse() {
+    let guess: i32 = match guess.trim().parse() {
       Ok(num) => num,
-      Err(_) => continue,
+      Err(_) => {
+        println!(
+          "input must be integer between {} {}",
+          Guess::MIN,
+          Guess::MAX
+        );
+        continue;
+      }
     };
 
-    println!("You guessed {}", guess); // {} is placeholder of variant like %s in c
+    let guess = match Guess::new(guess) {
+      Ok(g) => g,
+      Err(msg) => {
+        println!("{}", msg);
+        continue;
+      }
+    };
 
-    match guess.cmp(&secret) {
-      Ordering::Less => println!("small"),
+    match guess.get().cmp(&secret) {
+      Ordering::Less => println!("your guess is smaller than secret"),
       Ordering::Equal => {
         println!("win");
+        println!("you guessed {} times", challenge); // {} is placeholder of variant like %s in c
         break;
       }
-      Ordering::Greater => println!("big"),
+      Ordering::Greater => println!("your guess is bigger than secret"),
     }
   }
 }

@@ -85,12 +85,12 @@ fn method_and_debug() {
       self.area() < other.area()
     }
 
+    //mut self
     fn update_width(&mut self, width: f64) {
       self.width = width;
     }
 
-    fn _take_owner(self) {}
-
+    //static method - doesn't argument self
     fn square(edge: f64) -> Rectangle {
       //related function - called by (STRUCT NAME)::(function)
       Rectangle {

@@ -19,7 +19,7 @@ fn main() {
   after_main(1000);
   let _x = after_main(10); // x is (), and printed "x is under 100"
   loops();
-  println!("fibonutti 60 = {}", fib(20));
+  println!("fibonutti 20 = {}", fib(20));
 }
 
 //function can be declared anywhere
