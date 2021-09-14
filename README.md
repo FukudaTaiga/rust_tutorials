@@ -39,6 +39,9 @@ these are TRPL demos with descriptions
 ## Section 11
 [Tests](https://github.com/FukudaTaiga/rust_tutorials/tree/main/rust_test)
 
+## Section 12
+[File I/O and review so far](https://github.com/FukudaTaiga/rust_tutorials/tree/main/minigrep)
+
 ## Resourse
 [TRPL/ja](https://doc.rust-jp.rs/book-ja-pdf/book.pdf),
 [TRPL](https://github.com/rust-lang/book/tree/main/src)
