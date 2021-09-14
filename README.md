@@ -2,17 +2,33 @@ My TRPL memo (The Rust Programming Language)
 ====
 
 # Table of Contents
-these are TRPL demos with descriptions
+these are TRPL demos with descriptions.
+some projects have my original code, but mainly the same as TRPL.
+
+to run these implementations,
+```
+git clone git@github.com:FukudaTaiga/rust_tutorials.git
+```
+and
+```
+cd [target_directory] && cargo run
+```
+only for hello_world directory,
+```
+cd hello_world && rustc hello_world.rs && ./hello_world
+```
 
 ## Section 1
 [Hello World](https://github.com/FukudaTaiga/rust_tutorials/tree/main/hello_world)
+
 [Hello cargo](https://github.com/FukudaTaiga/rust_tutorials/tree/main/hello_cargo)
 
 ## Section 2
 [Guessing Game](https://github.com/FukudaTaiga/rust_tutorials/tree/main/guessing_game)
 
 ## Section 3
-[Variables and Type](https://github.com/FukudaTaiga/rust_tutorials/tree/main/var_and_type),
+[Variables and Type](https://github.com/FukudaTaiga/rust_tutorials/tree/main/var_and_type)
+
 [Function and Loop](https://github.com/FukudaTaiga/rust_tutorials/tree/main/functions)
 
 ## Section 4
@@ -43,5 +59,6 @@ these are TRPL demos with descriptions
 [File I/O and review so far](https://github.com/FukudaTaiga/rust_tutorials/tree/main/minigrep)
 
 ## Resourse
-[TRPL/ja](https://doc.rust-jp.rs/book-ja-pdf/book.pdf),
+[TRPL/ja](https://doc.rust-jp.rs/book-ja-pdf/book.pdf)
+
 [TRPL](https://github.com/rust-lang/book/tree/main/src)

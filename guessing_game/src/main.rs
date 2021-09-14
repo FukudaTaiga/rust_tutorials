@@ -44,9 +44,10 @@ fn main() {
                                                                      //println!("Secret is {}", secret);
   let mut challenge = 0;
 
+  println!("you have 20 chances to guess");
+
   loop {
     println!("Please input your guess");
-    challenge += 1;
 
     //let guess_imut = String::new(); <- immutable var
     // mutable var
@@ -78,14 +79,22 @@ fn main() {
       }
     };
 
+    challenge += 1;
+
     match guess.get().cmp(&secret) {
       Ordering::Less => println!("your guess is smaller than secret"),
       Ordering::Equal => {
-        println!("win");
+        println!("you win");
         println!("you guessed {} times", challenge); // {} is placeholder of variant like %s in c
         break;
       }
       Ordering::Greater => println!("your guess is bigger than secret"),
+    }
+
+    if 20 < challenge {
+      println!("you lose");
+      println!("the secret is {}", secret);
+      break;
     }
   }
 }
