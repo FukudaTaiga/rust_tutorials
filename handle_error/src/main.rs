@@ -5,6 +5,9 @@
 //    - handle by panic macro
 
 fn main() {
+  //generally, panic is prefferable while development - when providing library or special case
+  //Result propagate error to caller
+
   //_unrecoverable_error();
   recoverable_error();
 }
@@ -63,7 +66,7 @@ fn recoverable_error() {
 
   //handling error shortcut - unwrap, expect, ...
   //`match` is very strong way to handle pattern, but it can be verbose
-  // some of methods on Result like `unwrap()` and `expect()` are helpful
+  //some of methods on Result like `unwrap()` and `expect()` are helpful 
   let _f = File::open(DUMMY).unwrap(); //equal to below
                                        // match File::open(DUMMY) {
                                        //     Ok(value) => value,

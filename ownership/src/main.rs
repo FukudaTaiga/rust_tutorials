@@ -4,7 +4,7 @@
 // heap  - slow, variable length, ramdom access and allocating on the heap
 //         = find enough space and return a pointer
 //         used if the required size can't be determined on the compile or need variable length
-// ownership is third choice of handling heap - first is by programmer, second is gc
+// ownership is third choice of handling heap - first is by a programmer, second is gc
 // three rule: 1. any value is owned by `owner` variables
 //             2. whenever `owner` is exact one
 //             3. abondon if `owner` disappear from the current scope

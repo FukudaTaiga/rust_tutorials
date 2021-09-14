@@ -1,7 +1,7 @@
 use rand::Rng;
 
-//statement: end with ; like let x = ...;, loop {}; - never return any value
-//expression: value, function call, macro call, block({}), if - never add ;
+//statement: end with `;` like let x = ...;, loop {}; - never return any value
+//expression: value, function call, macro call, block({}), if, loops,... - never add ;
 
 //need type annotation for arg (and return value if exists)
 fn _add(x: i32, y: i32) -> i32 {

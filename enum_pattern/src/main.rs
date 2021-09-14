@@ -1,6 +1,11 @@
 // Sec 6
 // Rust enum very resembles to Functional PL like Haskell, Ocamel, F#
 // Option<T> {Some(T), None} is prelude compiled - no import to use
+// to say short,
+// Enum is a way to express Algebric data structure
+// pattern matching with
+// `match` or `(if, while, etc) let (Enum) = ~ {...}` is a way to handle such Enum
+// Of course, these are very strong feature of Rust not only for enum
 
 use rand::Rng;
 
@@ -79,11 +84,12 @@ fn enum_basic() {
               self.color.0 += r;
               self.color.1 += g;
               self.color.2 += b;
-            }
-            _ => (), //wild card
+            } //wild card _ => {...}
           }
         }
-        None => println!("done nothing"),
+        None => {
+          println!("done nothing")
+        }
       }
     }
     fn print(&self) {
@@ -98,9 +104,9 @@ fn enum_basic() {
   };
 
   let mut state = INITIAL;
-  let mut counter = [0,0,0,0];
+  let mut counter = [0, 0, 0, 0];
   loop {
-    let random = rand::thread_rng().gen_range(0, 1000);
+    let random = rand::thread_rng().gen_range(0, 10);
     state.action(if random == 0 {
       Some(Message::quit())
     } else if random % 4 == 0 {
