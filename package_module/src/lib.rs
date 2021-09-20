@@ -1,4 +1,13 @@
+//Packages: A Cargo feature that lets you build, test, and share crates
+//Crates: A tree of modules that produces a library or executable
+//Modules and use: Let you control the organization, scope, and privacy of paths
+//Paths: A way of naming an item, such as a struct, function, or module
+
 //rust project has 0 or 1 library crate and more than 1 binary crate
+//src/main.rs and src/lib.rs are called crate roots.
+//The reason for their name is that the contents of either of these two files
+//  form a module named crate at the root of the crate’s module structure,
+//  known as the module tree.
 //module handle privacy: is implementation public or private
 
 use std::{cmp::Ordering, io}; //nesting import

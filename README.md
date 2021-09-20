@@ -58,6 +58,20 @@ cd hello_world && rustc hello_world.rs && ./hello_world
 ## Section 12
 [File I/O and review so far](https://github.com/FukudaTaiga/rust_tutorials/tree/main/minigrep)
 
+## Section 13
+[Iterator, Closure](https://github.com/FukudaTaiga/rust_tutorials/tree/main/iterator_closure)
+
+## Section 14
+**skipping, make it later**
+[cargo, Crate.io](https://github.com/FukudaTaiga/rust_tutorials/tree/main/)
+
+## Section 15
+[Smart Pointer](https://github.com/FukudaTaiga/rust_tutorials/tree/main/smart_pointer)
+
+## Section 16
+**skipping, make it later**
+[Concurrency (thread)](https://github.com/FukudaTaiga/rust_tutorials/tree/main/)
+
 ## Resourse
 [TRPL/ja](https://doc.rust-jp.rs/book-ja-pdf/book.pdf)
 

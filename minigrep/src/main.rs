@@ -17,9 +17,9 @@ use minigrep::Config;
 fn main() {
     //get args as Vec - this will panic if args including invalid unicode
     //to handle such value, use `envs::args_os()` <- more complex
-    let args: Vec<String> = env::args().collect();
+    let args = env::args();
 
-    let config = Config::new(&args).unwrap_or_else(|err| { //closure - anonymous function
+    let config = Config::new(args).unwrap_or_else(|err| { //closure - anonymous function
       eprintln!("Problem parsing arguments: {}", err); //to stderr
       process::exit(1);
     });

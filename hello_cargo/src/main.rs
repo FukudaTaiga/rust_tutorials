@@ -6,6 +6,7 @@
 // cargo run = cargo build && ./target/debug/hello_cargo -> for shorthand to build and run
 // cargo check -> not build but check whether codes pass compiling or fail
 // cargo build --release -> build with optimization
+//to use unstable feature, cargo +nightly build (--target=...)
 fn main() {
     println!("Hello, world!");
 }
