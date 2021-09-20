@@ -13,6 +13,8 @@ and
 ```
 cd [target_directory] && cargo run
 ```
+some repository need to add option "+nightly"
+
 only for hello_world directory,
 ```
 cd hello_world && rustc hello_world.rs && ./hello_world
@@ -78,6 +80,17 @@ cd hello_world && rustc hello_world.rs && ./hello_world
 **WIP**
 
 [Object Oriented Programming](https://github.com/FukudaTaiga/rust_tutorials/tree/main/rust_oop)
+
+## Section 18
+**WIP**
+
+[Pattern matching](https://github.com/FukudaTaiga/rust_tutorials/tree/main/pattern_matching)
+
+## Section 19
+[Advanced feature](https://github.com/FukudaTaiga/rust_tutorials/tree/main/)
+
+## Section 20
+[Multi thread Web Server](https://github.com/FukudaTaiga/rust_tutorials/tree/main/)
 
 ## Resourse
 [TRPL/ja](https://doc.rust-jp.rs/book-ja-pdf/book.pdf)
