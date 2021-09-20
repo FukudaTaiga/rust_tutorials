@@ -63,6 +63,7 @@ cd hello_world && rustc hello_world.rs && ./hello_world
 
 ## Section 14
 **skipping, make it later**
+
 [cargo, Crate.io](https://github.com/FukudaTaiga/rust_tutorials/tree/main/)
 
 ## Section 15
@@ -70,7 +71,13 @@ cd hello_world && rustc hello_world.rs && ./hello_world
 
 ## Section 16
 **skipping, make it later**
+
 [Concurrency (thread)](https://github.com/FukudaTaiga/rust_tutorials/tree/main/)
+
+## Section 17
+**WIP**
+
+[Object Oriented Programming](https://github.com/FukudaTaiga/rust_tutorials/tree/main/rust_oop)
 
 ## Resourse
 [TRPL/ja](https://doc.rust-jp.rs/book-ja-pdf/book.pdf)
