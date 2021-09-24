@@ -1,8 +1,8 @@
 extern crate minigrep;
 
+use minigrep::Config;
 use std::env; //process given argument with execution `cargo run (...args)`
 use std::process;
-use minigrep::Config;
 
 //divide program into main.rs and lib.rs following steps
 //  Split your program into a main.rs and a lib.rs and move your program’s logic to lib.rs.
@@ -19,15 +19,17 @@ fn main() {
     //to handle such value, use `envs::args_os()` <- more complex
     let args = env::args();
 
-    let config = Config::new(args).unwrap_or_else(|err| { //closure - anonymous function
-      eprintln!("Problem parsing arguments: {}", err); //to stderr
-      process::exit(1);
+    let config = Config::new(args).unwrap_or_else(|err| {
+        //closure - anonymous function
+        eprintln!("Problem parsing arguments: {}", err); //to stderr
+        process::exit(1);
     });
 
     //println!("Serching {} in {}", config.query, config.filename);
 
-    if let Err(e) = minigrep::run(config) { //Result<(), ...> is unused when Ok -> if let
-      eprintln!("Application error: {}", e);
-      process::exit(1);
+    if let Err(e) = minigrep::run(config) {
+        //Result<(), ...> is unused when Ok -> if let
+        eprintln!("Application error: {}", e);
+        process::exit(1);
     }
 }
