@@ -87,12 +87,14 @@ cd hello_world && rustc hello_world.rs && ./hello_world
 [Pattern matching](https://github.com/FukudaTaiga/rust_tutorials/tree/main/pattern_matching)
 
 ## Section 19
+**WIP**
+
 [Advanced feature](https://github.com/FukudaTaiga/rust_tutorials/tree/main/)
 
 ## Section 20
 [Multi thread Web Server](https://github.com/FukudaTaiga/rust_tutorials/tree/main/)
 
 ## Resourse
-[TRPL/ja](https://doc.rust-jp.rs/book-ja-pdf/book.pdf)
+[TRPL/ja](https://doc.rust-jp.rs/book-ja/ch19-01-unsafe-rust.html)
 
 [TRPL](https://github.com/rust-lang/book/tree/main/src)

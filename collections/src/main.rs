@@ -210,7 +210,7 @@ fn hashmap() {
 
 fn exercise1_vec_training() {
     println!("Vector training!");
-    println!("type Integer and only enter to calc");
+    println!("type Integers and only enter to calc");
     let mut vec = Vec::<i32>::new();
     loop {
         let mut line = String::new();
