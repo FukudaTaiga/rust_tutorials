@@ -2,7 +2,7 @@
 use std::fmt;
 use std::ops::{Deref, DerefMut};
 
-pub fn adv_trait_demo() {
+pub fn trait_adv_demo() {
     associated_type();
     //default type arg is mainly used for two purpose
     //  1. extends code without breaking existing code

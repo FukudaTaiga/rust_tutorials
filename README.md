@@ -89,12 +89,14 @@ cd hello_world && rustc hello_world.rs && ./hello_world
 ## Section 19
 **WIP**
 
-[Advanced feature](https://github.com/FukudaTaiga/rust_tutorials/tree/main/)
+[Advanced feature](https://github.com/FukudaTaiga/rust_tutorials/tree/main/advanced_feature)
 
 ## Section 20
-[Multi thread Web Server](https://github.com/FukudaTaiga/rust_tutorials/tree/main/)
+[Multi thread Web Server](https://github.com/FukudaTaiga/rust_tutorials/tree/main/multi_thread_server)
 
 ## Resourse
-[TRPL/ja](https://doc.rust-jp.rs/book-ja/ch19-01-unsafe-rust.html)
+[TRPL/ja](https://doc.rust-jp.rs/book-ja/title-page.html)
 
 [TRPL](https://github.com/rust-lang/book/tree/main/src)
+
+[The Rust Reference](https://doc.rust-lang.org/reference/macros-by-example.html) - code examples

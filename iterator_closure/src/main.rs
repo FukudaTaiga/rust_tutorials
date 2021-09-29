@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+#![allow(unused_variables)]
 use rand::Rng;
 use std::collections::HashMap;
 use std::env;
