@@ -25,7 +25,7 @@ cd hello_world && rustc hello_world.rs && ./hello_world
 
 [Hello cargo](https://github.com/FukudaTaiga/rust_tutorials/tree/main/hello_cargo)
 
-cargo commands
+Cargo commands
 - new
 - check
 - build
@@ -48,9 +48,10 @@ Variables
 - declaration
 - immutability and mutability
 - shadowing
+
 Basic Types
-- Scalar Type integer, float, bool, char
-- Multiple Type tuple, array
+- scalar type integer, float, bool, char
+- multiple type tuple, array
 
 [Function and Loop](https://github.com/FukudaTaiga/rust_tutorials/tree/main/functions)
 
@@ -110,13 +111,16 @@ Vector
 - declaration, access
 - push, pop
 - how is multi typed vector implemented
+
 String(&str slice)
 - Why it is difficlt
 - declaration, access
 - push, push_str, format!, chars, as_bytes, bytes
+
 HashMap
 - declaration, access
 - insert, get, entry, or_insert
+
 Above collections Exercise
 
 ## Section 9
@@ -134,13 +138,15 @@ Generics
 - for structure as example
 - impl of generic typed
 - trait bound
-- performance, monomorphization 
+- performance, monomorphization
+
 Trait
 - trait, defining common behavior
 - default impl and how to impl it for concrete class
 - coherence, orphan rule
 - syntax suger impl (traitname)
 - where statement
+
 Concept of Lifetime
 - What is lifetime?
 - life time annotation
@@ -170,6 +176,7 @@ Iterator
 - creation with iter(), next()
 - consumer adoptor like sum, fold
 - iterator adoptor like map, flat_map, filter,...
+
 Closure
 - notation
 - difference to function
@@ -183,15 +190,20 @@ Closure
 
 ## Section 15
 [Smart Pointer](https://github.com/FukudaTaiga/rust_tutorials/tree/main/smart_pointer)
+
+**need "cargo +nightly ..." to compile**
+
 Box
 - What is Box?
 - usage
 - recursive strucure with Box, List Example
 - Deref, Drop trait
+
 Rc (Reference Count)
 - What is Rc?
 - multiple ownership
 - usage, Rc::clone, strong_count
+
 RefCell + (Rc, Weak)
 - internal mutability
 - borrow_mut
@@ -243,15 +255,18 @@ Unsafe
 - mutable static and difference to const
 - unsafe trait
 - Foreign Function Interface(FFI)
+
 Advanced Trait
 - associated type
 - default type argument
 - full path syntax
 - new type pattern
+
 Advanced type
 - type alias
 - never type and diverging function
 - dynamic sized type(DST) and Sized trait, ?Sized syntax
+
 Macro
 - declarative macro
 - procedual macro (very complex) WIP
@@ -261,13 +276,23 @@ Macro
 
 [Multi thread Web Server](https://github.com/FukudaTaiga/rust_tutorials/tree/main/multi_thread_server)
 
+this section refers to a Rust Compiler's problem
+and complex life timeimplementation and so on
+Read more carefully, its not enough
+
 TCP, HTTP with std library (single thread)
 - TcpListner, TcpStream
 - bind, incoming, read and write with io and buffer, flush
+
 refact to Multi thread
-- WIP
+- Mutex implementation
+- Compiler's problem
+- CDD
+
 Shutdown and Cleanup
-- WIP
+- Drop trait implementing use case
+- dead lock example
+- refact codes with CDD
 
 ## Resourse
 [TRPL/ja](https://doc.rust-jp.rs/book-ja/title-page.html)

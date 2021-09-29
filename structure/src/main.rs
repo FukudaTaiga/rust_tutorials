@@ -25,10 +25,10 @@ fn normal_structure() {
     fn _user_builder(username: String, email: String) -> User {
         User {
             username: username, // its tedious
-            email,               //shorthand
-            ..EMPTY_USER          //auto create missing fields with given structure
-                                  // is_active: EMPTY_USER.is_active,
-                                  // sign_in_count: EMPTY_USER.sign_in_count
+            email,              //shorthand
+            ..EMPTY_USER        //auto create missing fields with given structure
+                                // is_active: EMPTY_USER.is_active,
+                                // sign_in_count: EMPTY_USER.sign_in_count
         }
     }
 

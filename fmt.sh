@@ -7,3 +7,4 @@ for name in "${files[@]}"; do
 		echo `cd ${name} && cargo fmt`
 	fi
 done
+echo `clear`

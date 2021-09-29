@@ -3,7 +3,7 @@
 //  1. set up thread and run multi code simultaneously
 //  2. message concurrency that each chanel send a message to other
 //  3. state shareness of each thread
-//  4. Sync and Send trait 
+//  4. Sync and Send trait
 //multi thread programming is complicated and has potentially unique problems, like
 //  - race condition
 //  - dead lock
@@ -11,15 +11,15 @@
 //thread model - 1:1, M:N
 //Rust adopts 1:1 model for performance reason (a bit runtime), but M:N crate exists
 //this means the maximum number of Rust threads is depends on OS's property
-mod usage;
 mod channel;
 mod mutex;
+mod usage;
 
 fn main() {
     println!("usage!");
     usage::usage();
     println!("------------------------------------");
-    
+
     println!("channel!");
     channel::channel();
     println!("------------------------------------");

@@ -4,11 +4,11 @@
 //  advanced trait
 //  advanced type
 //  advanced function and closure
+mod function_adv;
+mod rust_macro;
 mod trait_adv;
 mod type_adv;
 mod unsafe_rust;
-mod function_adv;
-mod rust_macro;
 
 fn main() {
     println!("unsafe!");
@@ -49,7 +49,8 @@ fn main() {
     println!("----------------------------------");
 
     println!("macro!");
-    println!("
+    println!(
+        "
 ----------------------------------------------------------------------------------------
 |Why macro exists?                                                                     |
 |macro is a kind of meta programming                                                   |
@@ -63,7 +64,8 @@ fn main() {
 |macro is very powerfull functionaity, but complex...                                  |
 |think trade off before use                                                            |
 ----------------------------------------------------------------------------------------\
-");
+"
+    );
     rust_macro::macro_demo();
     println!("----------------------------------");
 }
