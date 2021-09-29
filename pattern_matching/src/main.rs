@@ -1,3 +1,4 @@
+#![allow(unused)]
 //Sec 18
 //pattern is notation that matches to some type structure
 //PATTERN is created by
@@ -79,6 +80,7 @@ fn pattern_destruction() {
     }
     dest(&(1, 2));
 
+    //Refutability - if let,... 
     println!(
         "
   if there may be uncatchable pattern, PATTERN is usable in `if let` or `while let`

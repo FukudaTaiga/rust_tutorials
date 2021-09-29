@@ -1,5 +1,7 @@
+//sec 3
 use rand::Rng;
 
+//Syntax
 //statement: end with `;` like let x = ...;, loop {}; - never return any value
 //expression: value, function call, macro call, block({}), if, loops,... - never add ;
 
@@ -10,7 +12,7 @@ fn _add(x: i32, y: i32) -> i32 {
 
 //return last asserted expression like scala
 fn _five() -> i64 {
-    5 //if ; added, compile error
+    5 //if `;` added, compile error
 }
 
 fn main() {

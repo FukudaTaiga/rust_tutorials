@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 // Sec 5 structure
 // struct -> create new type
 
@@ -10,21 +11,21 @@ fn main() {
 
 fn normal_structure() {
     struct User {
-        _username: String, //to set &str, need to define lifetime specifier
-        _email: String,
+        username: String, //to set &str, need to define lifetime specifier
+        email: String,
         sign_in_count: u64,
         is_active: bool,
     }
     const EMPTY_USER: User = User {
-        _username: String::new(),
-        _email: String::new(),
+        username: String::new(),
+        email: String::new(),
         sign_in_count: 0,
         is_active: false,
     };
-    fn _user_builder(_username: String, _email: String) -> User {
+    fn _user_builder(username: String, email: String) -> User {
         User {
-            _username: _username, // its tedious
-            _email,               //shorthand
+            username: username, // its tedious
+            email,               //shorthand
             ..EMPTY_USER          //auto create missing fields with given structure
                                   // is_active: EMPTY_USER.is_active,
                                   // sign_in_count: EMPTY_USER.sign_in_count
@@ -33,18 +34,18 @@ fn normal_structure() {
 
     let _empty = EMPTY_USER;
     let im_user = User {
-        _email: String::from("xyz@example.com"),
+        email: String::from("xyz@example.com"),
         is_active: true,
-        _username: String::from("abc"),
+        username: String::from("abc"),
         sign_in_count: 1,
     };
     println!("im_user sign in count: {}", im_user.sign_in_count);
     //im_user.is_active = true; compile error
 
     let mut mut_user = User {
-        _email: String::from("uvw@example.com"),
+        email: String::from("uvw@example.com"),
         is_active: false,
-        _username: String::from("def"),
+        username: String::from("def"),
         sign_in_count: 5,
     };
     println!("before mutate: {}", mut_user.is_active);

@@ -1,3 +1,4 @@
+#![allow(unused)]
 //Sec 16
 //OOP - introduced by Alan Kay, at first
 //Object-oriented programs are made up of objects.
@@ -97,11 +98,11 @@ fn type_system_inheritance() {
     );
 
     //Self is the abbrevigation of its type
-    struct _A {}
-    impl _A {
+    struct A {}
+    impl A {
         fn _a() -> Self {
             //Self is A, here
-            _A {}
+            A {}
         }
     }
 

@@ -1,3 +1,4 @@
+#![allow(unused)]
 //Sec 10
 
 fn main() {
@@ -63,7 +64,7 @@ fn demo_generics() {
             }
         }
 
-        //dividing with trait bounding - shoould also search 'blanket implementation'
+        //dividing with trait bounding - should also search 'blanket implementation'
         impl<T: std::fmt::Display + PartialOrd, U> GenericsStruct<T, U> {
             pub fn large_x_y(&self) {
                 if self.x < self.y {
@@ -243,7 +244,7 @@ fn demo_lifetime() {
     //lifetime guarantees the refference is valid while required,
     //in addition to type properties
     //any value is managed by `owenership`
-    //any refference is managed by `lifetime`
+    //any reference is managed by `lifetime`
 
     println!("'a, 'b are lifetime annotation for r and x each other");
 

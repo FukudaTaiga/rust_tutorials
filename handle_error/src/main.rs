@@ -1,3 +1,4 @@
+#![allow(unused)]
 //two type error
 // recoverable error ... can't find some file
 //    - handle by Result enum
@@ -12,7 +13,7 @@ fn main() {
     recoverable_error();
 }
 
-fn _unrecoverable_error() {
+fn unrecoverable_error() {
     //panic macro
     //if panic happens, then there are two approach considerable
     //  One, unwinding and clean up data - this work take hard

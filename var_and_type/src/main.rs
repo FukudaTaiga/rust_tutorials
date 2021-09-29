@@ -1,3 +1,4 @@
+//sec 3
 //const must be determined when compiled
 //const can be declared in any scope
 //const need type annotation
@@ -37,8 +38,8 @@ fn shadow_and_mut() {
                                //_spaces = _spaces.len(); //compile error
 }
 
+//types - scalar type (primitive) or multiple type
 fn basic_scalar_type() {
-    //types - scalar type (primitive) or multiple type
     // scalar type
     // signed integer - i8~i64, isize(depending on OS)
     // unsigned - u8~u64, usize(depending on OS)
